@@ -8,13 +8,13 @@
 /* [Main] */
 
 // in mm
-x_width=62;
+x_width=42;
 
 // in mm
-y_width=80;
+y_width=71;
 
 // in mm
-height=20/2;
+height=18/2;
 
 // Wall thickness in mm
 thickness=1.6; // [1:10]
@@ -23,10 +23,10 @@ thickness=1.6; // [1:10]
 radius=2; // [0:50]
 
 // Generate the box
-do_box=1; // [0:no,1:yes]
+do_box=0; // [0:no,1:yes]
 
 // Generate a lid
-do_lid=0; // [0:no,1:yes]
+do_lid=1; // [0:no,1:yes]
 
 // height in mm
 lid_thickness=3;
