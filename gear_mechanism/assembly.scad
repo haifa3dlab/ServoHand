@@ -1,15 +1,16 @@
 include <chen_params.scad>;
 use <moreShapes.scad>;
+include <../enclosure/box_params.scad>;
 
  dist = 7;
 
-/*/ Main Part
+// Main Part
 difference() {
   union() {
       
     //bottm cube
     translate([0,0,-0.1])
-    cube([main_board_width, main_board_len, main_board_thinkness+0.1]);
+    cube([main_board_width+2.5, main_board_len, main_board_thinkness+0.1]);
        
 
         
@@ -28,6 +29,7 @@ difference() {
     translate([servo_higeht-11.1,0.1,7.3])
       rotate([-90,0,-90])
        trapezoidPrism(0, 3.6, 7.3,0,8.5,false);
+       
    }
    main_ball_holes();
    holes();
@@ -47,6 +49,19 @@ difference() {
    
    
  }
+        {  
+        /* color ("red")   
+           translate([main_board_width+10,0,0])
+              rotate([0,-90,0]) 
+                 cube([x_width-10, main_board_len, height*2+3]);   
+            */
+          color("blue")
+            //translate([main_board_width+30,main_board_len/2,0])
+             translate([main_board_width-14,main_board_len/2-7.5,41])
+             rotate([-90,0,-90])
+             import("../enclosure/box_with_holes2.stl", convexity = 5);
+             //import("../enclosure/pbox.stl", convexity = 5);
+       }     
  
 
   
@@ -55,7 +70,7 @@ difference() {
 //-----------------------------------------------------------------------
 //*/
 
-//*// Rack Part;
+/*// Rack Part;
 
 difference() {
 translate([35,44.6,8.3+2*bearing_rad-bearing_depth])  

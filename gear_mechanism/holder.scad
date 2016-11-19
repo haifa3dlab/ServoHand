@@ -10,7 +10,7 @@ $fn = 20;
 
 difference()
 {
-    cube([main_board_width, main_board_len-rack_movement_length+8, holder_h]);
+    cube([main_board_width-11.5, main_board_len-rack_movement_length+8, holder_h]);
  
   difference() {
   
@@ -35,6 +35,7 @@ difference()
  }
 
  
+ // Get the size right
     translate([servo_higeht-12+0.13,0   ,0])
         color("green")
             cube([10,main_board_len-rack_movement_length+8,holder_h]);

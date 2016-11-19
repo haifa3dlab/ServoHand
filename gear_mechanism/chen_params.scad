@@ -2,6 +2,12 @@ main_board_width = 58;
 main_board_thinkness = 3;
 main_board_len = 70;
 
+Chip_Extension=10;
+
+up_board_x=main_board_width;
+up_board_y=10;
+up_board_z=50;
+
 rack_thickness    = 10;
 rack_movement_length = 25;
 gear_scale = 0.8;

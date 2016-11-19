@@ -1,10 +1,12 @@
-
+include <box_params.scad>;
 union() {
-    difference() 
+    //difference() 
     {
-        translate([65,40,0])  // bring to origin
-           import("box.stl", convexity = 5);
-       
+
+        rotate([0,-90,0])
+           import("pbox.stl", convexity = 5);
+        //translate([x_width/2,y_width/2,height/2-2.5])  // bring to origin    
+        //import("box.stl", convexity = 5);
     
 // hole for USB Power
 color("blue")

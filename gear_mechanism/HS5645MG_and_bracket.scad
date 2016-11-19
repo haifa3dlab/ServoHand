@@ -81,15 +81,15 @@ difference()
 translate([bracket_x_offset,
            -bracket_width/2,
            -hs5645mg__servo_height+hs5645mg__frame_v_offset+hs5645mg__frame_thickness])
-      cube([hs5645mg__frame_length+bracket_length_delta ,bracket_width,5]);
+      cube([hs5645mg__frame_length+bracket_length_delta ,bracket_width-4,5]);
 
 
-translate([holes_base_x-2,
+translate([holes_base_x-0.5,
      -1,
     -16])
 
-cube([hs5645mg__servo_length+11,
-      2,
+cube([hs5645mg__servo_length+10,
+      2.2,
       10]);
 
 
